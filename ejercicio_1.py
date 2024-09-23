@@ -1,10 +1,21 @@
+
 def presentarse():
-    nombre = "ricardo"  # Debe ser una cadena
-    edad = 20           # Debe ser un entero
-    pais = "Argentina"  # Debe ser una cadena
+    
+    nombre = input("¿Cuál es tu nombre? ")
+    
 
-    print(f"¡Hola! Me llamo {nombre}.")
-    print(f"Tengo {edad} años.")
-    print(f"Soy de {pais}.")
+    while True:
+        try:
+            edad = int(input("¿Cuál es tu edad? "))  
+            break  
+        except ValueError:
+            print("Por favor, ingresa un número entero válido para la edad.") 
+    
+    
+    pais = input("¿Cuál es tu país? ")
+    
+   
+    print(f"Hola, mi nombre es {nombre}, tengo {edad} años y soy de {pais}.")
 
 
+presentarse()
